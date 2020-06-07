@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.textbox-error {
+    border: 2px solid red;
+}
+
+#login {
+    margin: 5% 8% 0;
+    border: 1px solid #1b6ca8;
+    padding: 3%;
+}
+
+#to-do {
+    margin: 5% 10% 2%;
+}
+
+#errorMessage {
+    margin: 2%;
+}
+
+.btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
