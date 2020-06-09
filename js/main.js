@@ -7,7 +7,7 @@ $(document).ready(()=>{
         let id = $(this).attr('id');
         id = id.slice(4);
         if (this.checked) {
-            $(`tr#row${id}`).addClass('completed-task');
+            $(`tr#row${id}`).addClass('completed-task text-light');
             let promise1 = addCheckbox(id);
             promise1
             .then((e)=>{
@@ -17,7 +17,7 @@ $(document).ready(()=>{
             .catch((e)=>console.log(e));
         }
         else {
-            $(`tr#row${id}`).removeClass('completed-task');
+            $(`tr#row${id}`).removeClass('completed-task text-light');
             let promise2 = removeCheckbox(id);
             promise2
             .then((e)=>console.log(e))
@@ -42,7 +42,7 @@ function generateData() {
             var output = "";
             response.forEach(element => {
                 if (element.completed == true) {
-                    output += `<tr class='completed-task' id='row${element.id}'>`;
+                    output += `<tr class='completed-task  text-light' id='row${element.id}'>`;
                     output += `<td><input type="checkbox" class="ml-3" id="task${element.id}" checked disabled></td>`;
                     output += `<td>${element.title}</td>`;
                 } else {
@@ -88,5 +88,5 @@ function removeCheckbox(cbID) {
 }
 
 function logOut() {
-    window.location.replace = "./index.html"
+    window.location.replace("./index.html");
 }
