@@ -72,5 +72,7 @@ function validate(callback) {
 }
 
 function redirect() {
-    window.location.href = "./main.html"
+    setTimeout(()=>{
+        window.location.href = "./main.html";
+    }, 1000);
 }
